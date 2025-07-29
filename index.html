@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TotalChi Life Coaching</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">TotalChi</h1>
+      <nav>
+        <a href="#about" data-i18n="nav_about"></a>
+        <a href="#services" data-i18n="nav_services"></a>
+        <a href="#testimonials" data-i18n="nav_testimonials"></a>
+        <a href="#contact" data-i18n="nav_contact"></a>
+        <button id="lang-toggle">NL</button>
+<a href="#contact" class="cta-button" data-i18n="book_call_btn"></a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container hero-content">
+      <h2 data-i18n="hero_title"></h2>
+      <p data-i18n="hero_subtitle"></p>
+      <button onclick="scrollToSection('contact')" data-i18n="hero_cta"></button>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2 data-i18n="about_title"></h2>
+    <div class="about-content">
+  <div class="about-text">
+    <p data-i18n="about_text"></p>
+  </div>
+  <img src="/IMG_0156.PNG" alt="Coach Photo" class="profile-pic rounded" />
+</div>
+  </section>
+
+  <section id="services" class="container">
+    <h2 data-i18n="services_title"></h2>
+    <div class="cards">
+      <div class="card" onclick="showDetails('session')">
+        <h3 data-i18n="service1_title"></h3>
+        <p data-i18n="service1_desc"></p>
+      </div>
+      <div class="card" onclick="showDetails('retreat')">
+        <h3 data-i18n="service2_title"></h3>
+        <p data-i18n="service2_desc"></p>
+      </div>
+      <div class="card" onclick="showDetails('online')">
+        <h3 data-i18n="service3_title"></h3>
+        <p data-i18n="service3_desc"></p>
+      </div>
+    </div>
+    <div id="service-details" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="hideDetails()">&times;</span>
+        <div id="service-info"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="container">
+    <h2 data-i18n="testimonials_title"></h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p data-i18n="testimonial1"></p>
+        <span data-i18n="testimonial1_author"></span>
+      </div>
+      <div class="testimonial">
+        <p data-i18n="testimonial2"></p>
+        <span data-i18n="testimonial2_author"></span>
+      </div>
+      <button class="see-all-btn" onclick="scrollToSection('all-testimonials')" data-i18n="see_all_btn"></button>
+    </div>
+  </section>
+
+  <section id="all-testimonials" class="container">
+    <h2 data-i18n="all_testimonials_title"></h2>
+    <div id="testimonial-list">
+      <!-- Meer testimonials kunnen hier dynamisch geladen worden -->
+    </div>
+    <h3 data-i18n="share_experience"></h3>
+    <form id="testimonialForm">
+      <input type="text" name="name" placeholder="" data-i18n="placeholder_name" required />
+      <textarea name="testimonial" placeholder="" data-i18n="placeholder_experience" required></textarea>
+      <button type="submit" data-i18n="submit_testimonial"></button>
+    </form>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 data-i18n="contact_title"></h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="" data-i18n="placeholder_contact_name" required />
+      <input type="email" name="email" placeholder="" data-i18n="placeholder_contact_email" required />
+      <textarea name="message" placeholder="" data-i18n="placeholder_contact_message" required></textarea>
+      <button type="submit" data-i18n="contact_submit"></button>
+    </form>
+    <iframe src="https://calendly.com/YOUR-CALENDLY-URL" class="calendar"></iframe>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 TotalChi | <span data-i18n="footer_note"></span></p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

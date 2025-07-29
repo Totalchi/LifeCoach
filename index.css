@@ -1,0 +1,290 @@
+/* ALGEMENE OPMAAK */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #006666;
+}
+
+/* NAVIGATIE */
+header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #009999;
+}
+
+#lang-toggle {
+  background: #006666;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* HERO */
+#hero {
+  background: linear-gradient(to right, #e0f7fa, #e0ffe0);
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  padding: 0.75rem 1.5rem;
+  background: #006666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero-content button:hover {
+  background: #004d4d;
+}
+
+/* OVER MIJ */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* DIENSTEN */
+.cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* TESTIMONIALS */
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.testimonial-grid .testimonial,
+#testimonial-list .testimonial {
+  flex: 1;
+  background: #f1f8f6;
+  padding: 1rem;
+  border-left: 4px solid #006666;
+  border-radius: 5px;
+  min-width: 250px;
+}
+
+/* SEE ALL KNOP */
+.see-all-btn {
+  align-self: center;
+  padding: 0.7rem 1.4rem;
+  background: #006666;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  margin-top: auto;
+  height: fit-content;
+}
+
+.see-all-btn:hover {
+  background: #004d4d;
+  transform: scale(1.05);
+}
+
+/* FORMULIEREN */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+form button {
+  background: #006666;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #004d4d;
+}
+
+/* CALENDAR */
+.calendar {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-top: 2rem;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content img.profile-pic {
+  max-width: 300px;
+  border-radius: 16px;
+}
+
+.fancy-shadow {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.cta-button {
+  background-color: #006666;
+  color: white;
+  padding: 0.6rem 1rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004d4d;
+}
